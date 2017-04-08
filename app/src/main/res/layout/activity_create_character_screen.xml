@@ -1,0 +1,148 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="charCreation" type="com.example.garethlye.fightingtestmechanic.CreateCharacterScreen"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#019969"
+        tools:context="com.example.garethlye.fightingtestmechanic.CreateCharacterScreen">
+
+        <TextView
+            android:id="@+id/characterCreationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/character_creation"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/characterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/characterCreationText"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#DCDCDC"
+            android:gravity="center"
+            android:hint="@string/name"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/characterName"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_toStartOf="@+id/classesDropDown"
+            android:gravity="end|center"
+            android:text="@string/classText"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/classesDropDown"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/characterName"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/darker_gray"
+            android:entries="@array/classes"
+            android:prompt="@string/chooseYourClass"/>
+
+        <TextView
+            android:id="@+id/hpText"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/nameText"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toStartOf="@+id/classesDropDown"
+            android:gravity="end|center"
+            android:text="@string/hpText"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/hpValue"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/classesDropDown"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/darker_gray"
+            android:text="@{charCreation.hpValue}"
+            android:textColor="@android:color/holo_green_light"/>
+
+        <TextView
+            android:id="@+id/manaText"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/hpText"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toStartOf="@+id/classesDropDown"
+            android:gravity="end|center"
+            android:text="@string/manaText"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/manaValue"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/hpValue"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/darker_gray"
+            android:text="@{charCreation.manaValue}"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <TextView
+            android:id="@+id/availableSkills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/manaValue"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/availableSkills"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/skills"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/availableSkills"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="#1A000000"
+            android:gravity="center"
+            android:text="@{charCreation.skillsList}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/skills"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:onClick="@{charCreation::onProceedClick}"
+            android:text="@string/proceedText"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+</layout>

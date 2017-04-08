@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">FightingTestMechanic</string>
+    <string name="welcome_text">WELCOME</string>
+    <string name="welcome_desc">This app is to test the fighting mechanics for a game that\'s in the making.
+    You will be able to select a character class and type with varying HP and Mana, then the game will immediately place
+        you in the dungeon where you can select where you would like to go or do. Be careful as monsters will randomly
+        spawn every time you make a move. You must fight them to gain experience points and obtain newer abilities(MAX 5
+    currently). Each monster will randomly drop one item which may assist you in the game play. The game saves after every
+        monster you kill. Please note that this segment is to test fighting mechanics, and may contain bugs and glitches.
+        Please do not get angry if your saved data is lost on system crashes. If there are any comments on this text system
+    please Telegram Gareth.</string>
+    <string name="create_your_char">CREATE YOUR CHARACTER</string>
+    <string name="deletePreviousDataText">DELETE PREVIOUS DATA</string>
+    <string name="character_creation">CHARACTER CREATION</string>
+    <string name="proceedText">PROCEED</string>
+    <string name="name">Name</string>
+    <string name="classText">Class : </string>
+    <string name="hpText">Hit Points (HP) : </string>
+    <string name="manaText">Mana (MP) : </string>
+    <string name="chooseYourClass">Choose Your Class</string>
+    <string name="availableSkills">Available Skills</string>
+    <string name="errorTEXT">ERROR!</string>
+    <string name="warrior">Warrior</string>
+    <string name="mage">Mage</string>
+    <string name="archer">Archer</string>
+
+    <string-array name="classes">
+        <item>Warrior</item>
+        <item>Mage</item>
+        <item>Archer</item>
+    </string-array>
+
+    <string name="warriorSkills">Plunge Attack : 8dmg\nLight Swing: 5dmg\nHeavy Swing : 10dmg\nFlame Swing : 15dmg\nExcalibur Slam : 35dmg</string>
+    <string name="mageSkills">Staff Poke : 5 dmg\nFire Ball : 8dmg\nIce Shard Blast : 10dmg\Corruption Acid : 15dmg\nMeteor Strike : 30dmg</string>
+    <string name="archerSkills">Quick Arrow : 5 dmg\nPiercing Shot : 8 dmg\nTriple Head Fire Arrow : 15 dmg\nBlack Cloud of Arrows : 30dmg</string>
+</resources>
